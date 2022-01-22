@@ -73,13 +73,78 @@ class TareaController extends Controller
      $pdf->SetFont('Arial', '' , 12);
      
      $pdf->Cell(110, 6, 'DATOS DEL ALUMNO', 1, 0, 'C');
-     $pdf->Cell(145, 6, ' ', 1, 0);
+     $pdf->Cell(156, 6, ' ', 1, 0);
      $pdf->SetFillColor(211, 216, 212);
      $pdf->Ln();
 
-     $pdf->Cell(10, 3, 'N', 1, 0);
-     $pdf->Cell(40, 3, 'Matricula', 1, 0);
-     $pdf->Cell(60, 3, 'Nombre', 1, 0);
+     $pdf->Cell(10, 4, 'N', 1, 0);
+     $pdf->Cell(40, 4, 'Matricula', 1, 0);
+     $pdf->Cell(60, 4, 'Nombre', 1, 0);
+
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 0);
+        $pdf->Cell(6, 4, ' ', 1, 1);
+
+        $pdf->SetFont('Arial', '', 10);
+     for ($i=1; $i <=40 ; $i++) {
+        $pdf->Cell(10, 3, $i, 1, 0);
+        $pdf->Cell(40, 3, '20212300 ', 1, 0);
+        $pdf->Cell(60, 3, 'BRAYAN ISAI MAY CHUC', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 0);
+        $pdf->Cell(6, 3, ' ', 1, 1);
+    }
+     $pdf->Ln(5);   
+     $pdf->SetFont('Arial', 'B', 8);
+        $pdf->Line(100, 190, 170, 190);
+        $pdf->Cell(145, 5, 'FIRMA DEL DOCENTE', 0, 0, 'R');
+        
 
      $pdf->Output();
      Exit;
