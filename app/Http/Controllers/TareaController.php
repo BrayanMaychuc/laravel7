@@ -34,9 +34,44 @@ class TareaController extends Controller
      $pdf ->SetFont('Arial', 'B', 8);
      $pdf->Cell(290, 5, 'TECNICO SUPERIOR UNIVERSITARIO EN TECNOLOGIAS DE LA INFORMACION Y LA COMUNICACION AREA DE DESARROLLO DE SOFTWARE MULTIPLATAFORMA', 0, 0, 'C');
 
-     $pdf-> Line(1, 0, 5, 0);
+     $pdf-> image(public_path(). '/dist/uutc.jpeg', 12, 4, 30);
 
-     $pdf-> image(public_path(). '/dist/uutc.jpeg', 10, 10, 25);
+     $pdf -> Ln(7);
+
+     $pdf->SetFont('Arial', 'B', 11);
+     //TITULO #1 DOCENTE
+     $pdf->Cell(40, 5, 'Docente:', 0, 0, 'R');
+
+     $pdf->Cell(60, 5, 'Mtro. Jose Gilberto Balam Balam', 'B',0, 'C');  
+     //UNIDAD
+     $pdf->Cell(40, 7, 'Unidad:', 0, 0, 'R'); 
+
+     $pdf->Cell(20, 7, '1', 'B' ,0 , 'C');  
+    //CUATRIMESTRE
+     $pdf->Cell(50, 8, 'Cuatrimestre:', 0, 0, 'C'); 
+
+     $pdf->Cell(40, 7, '4', 'B', 0, 'C'); 
+
+     $pdf->Ln(7);
+     $pdf->SetFont('Arial', 'B', 11);
+     //MATERIA
+     $pdf->Cell(35, 5, 'Materia:', 0, 0, 'R');
+
+     $pdf->Cell(75, 5, 'Aplicaciones Web Orientada a servicios', 'B',0, 'C');
+     //Grupo
+     $pdf->Cell(30, 7, 'Grupo:', 0, 0, 'R'); 
+
+     $pdf->Cell(20, 7, 'TTD-4A', 'B' ,0 , 'C');
+     //PERIODO
+     $pdf->Cell(50, 8, 'Periodo:', 0, 0, 'C'); 
+
+     $pdf->Cell(40, 7, 'Sep-Dic 2020', 'B', 0, 'C');
+
+
+
+
+
+
 
      $pdf->Output();
      Exit;
