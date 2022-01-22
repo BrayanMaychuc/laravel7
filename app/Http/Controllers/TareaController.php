@@ -53,6 +53,7 @@ class TareaController extends Controller
      $pdf->Cell(40, 7, '4', 'B', 0, 'C'); 
 
      $pdf->Ln(7);
+
      $pdf->SetFont('Arial', 'B', 11);
      //MATERIA
      $pdf->Cell(35, 5, 'Materia:', 0, 0, 'R');
@@ -67,11 +68,18 @@ class TareaController extends Controller
 
      $pdf->Cell(40, 7, 'Sep-Dic 2020', 'B', 0, 'C');
 
+     $pdf->Ln(12);
+        //SECCION DE LA LISTA
+     $pdf->SetFont('Arial', '' , 12);
+     
+     $pdf->Cell(110, 6, 'DATOS DEL ALUMNO', 1, 0, 'C');
+     $pdf->Cell(145, 6, ' ', 1, 0);
+     $pdf->SetFillColor(211, 216, 212);
+     $pdf->Ln();
 
-
-
-
-
+     $pdf->Cell(10, 3, 'N', 1, 0);
+     $pdf->Cell(40, 3, 'Matricula', 1, 0);
+     $pdf->Cell(60, 3, 'Nombre', 1, 0);
 
      $pdf->Output();
      Exit;
